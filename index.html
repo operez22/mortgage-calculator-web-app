@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Payment Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Mortgage Payment Calculator</h1>
+    </header>
+
+    <main>
+
+        
+        <section class="intro">
+            <h2>Welcome to the Mortgage Calculator</h2>
+            <p>
+                We know just how incredibly stressful it can be when owning a house these days. Although, we can't solve everything we can help you with your mortgage payments.
+
+                The mortgage calculator is a simple tool that helps you estimate your monthly payments based on the loan amount, interest rate, and loan term.
+                Enter your loan details below to get started.
+            </p>
+        </section>
+
+        
+        <div class="grid-container">
+
+            
+            <section class="calculator">
+                <h2>Enter Mortgage Details</h2>
+
+                <form id="mortgageForm" novalidate>
+                    <label for="principal">Principal Amount ($)</label>
+                    <input type="number" id="principal" required>
+
+                    <label for="rate">Yearly Interest Rate (%)</label>
+                    <input type="number" id="rate" step="0.01" required>
+
+                    <label for="years">Mortgage Term (Years)</label>
+                    <select id="years" required>
+                        <option value="">Select term</option>
+                        <option value="10">10 Years</option>
+                        <option value="15">15 Years</option>
+                        <option value="30">30 Years</option>
+                    </select>
+
+                    <button type="submit">Calculate Payment</button>
+                </form>
+
+                <p id="error" class="error"></p>
+                <p id="result" class="result"></p>
+            </section>
+
+            
+            <section class="image-box">
+                <img src="mortgagePic.jpg" 
+                     alt="House Icon">
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>View the project on 
+            <a href="https://github.com/operez22/mortgage-calculator-web-app" target="_blank">GitHub</a>
+        </p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
